@@ -29,12 +29,12 @@ public class AuthenticationController extends AbstractController {
 		model.addAttribute("username", newUsername);
 		String newPassword = request.getParameter("password");
 		String newVerifyPassword = request.getParameter("verify");
-		String user_error = request.getParameter("username_error");
-		user_error = "Not a valid username";
-		String pass_error = request.getParameter("password_error");
-		pass_error = "Not a valid username";
-		String v_error = request.getParameter("verify_error");
-		v_error = "Not a valid username";
+//		String user_error = request.getParameter("username_error");
+//		user_error = "Not a valid username";
+//		String pass_error = request.getParameter("password_error");
+//		pass_error = "Not a valid password";
+//		String v_error = request.getParameter("verify_error");
+//		v_error = "password not matching";
 		
 		
 		if ((User.isValidUsername(newUsername)) && (User.isValidPassword(newPassword))){
@@ -47,7 +47,8 @@ public class AuthenticationController extends AbstractController {
 				return "redirect:blog/newpost";
 			}
 			
-		}			
+		}	
+		
 		return "signup";
 	}
 	
