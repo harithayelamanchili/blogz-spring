@@ -45,6 +45,7 @@ public class AuthenticationController extends AbstractController {
 
 				return "redirect:blog/newpost";
 			}
+			return "signup";
 
 		}		
 
