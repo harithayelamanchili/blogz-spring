@@ -1,7 +1,10 @@
 <!DOCTYPE html>
+
 <html xmlns:th="http://www.thymeleaf.org/">
+
 <head th:replace="template :: dochead">
 </head>
+
 <body>
 
 	<div th:replace="template :: navigation"></div>
@@ -9,6 +12,11 @@
 	<h1>blog users!</h1>
 
 	<!--  TODO - list all users, with links to their blog pages -->
+	
+	<ul>
+		<li th:each="user : ${users}"><a th:href="'/blog/' + ${user.username}"><span th:text="${user.username}"></span></a></li>
+	</ul>
 
 </body>
+
 </html>
